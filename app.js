@@ -9,6 +9,17 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
+//mongoose
+const mongoose = require('mongoose');
+const url = 'mongodb+srv://dev-test:Nam123456@cluster0.mgero.mongodb.net/db01?retryWrites=true&w=majority'
+mongoose.connect(url, {useNewUrlParser: true, useUnifiedTopology: true});
+
+// const Cat = mongoose.model('Cat', { name: String });
+
+// const kitty = new Cat({ name: 'Zildjian' });
+// kitty.save().then(() => console.log('meow'));
+//
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
